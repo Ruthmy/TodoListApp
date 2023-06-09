@@ -61,7 +61,7 @@ li { list-style: none; }
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  background: var(--background);
+  background: var(--todo-background);
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
