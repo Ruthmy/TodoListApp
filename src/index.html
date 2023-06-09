@@ -17,19 +17,15 @@
 
 <body>
     <main>
-        <div class="checklist">
+        <div id="checklist">
             <div class="header">
                 <h1><%= header%></h1>
             </div>
-            <div class="items">
-                <form id="add-form" class="add-form">
+            <div id="items">
+                <form id="add-form" class="add-form" action="" method="">
                     <label for="add-item">
-                        <input type="text" name="add-item" id="add-item" class="add-form__input" placeholder="Add a new item..." required autofocus>
-                        <button type="button" id="add-button">
-                            <span class="material-symbols-rounded">
-                            subdirectory_arrow_left
-                            </span>
-                        </button>
+                        <input type="text" name="add-item" id="add-item" class="add-form__input" placeholder="Add a new item..." required>
+                        <button type="button" id="add-button"></button>
                     </label>
                     <div id="error"></div>
                 </form>
@@ -37,8 +33,8 @@
                     
                 </ul>
             </div>
-            <div class="clear">
-                <button type="button" id="clear-button">Clear all completed</button>
+            <div id="clear">
+                <button type="button">Clear all completed</button>
             </div>
         </div>
     </main>
