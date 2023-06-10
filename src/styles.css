@@ -56,7 +56,9 @@ li { list-style: none; }
 
 /* Todo List */
 
-.checklist {
+/* Checklist */
+
+#checklist {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -71,12 +73,12 @@ li { list-style: none; }
   transition: max-height 0s;
 }
 
-.header {
-  display: flex;
-  flex-wrap: wrap;
+/* Header */
+
+#checklist .header {
   width: 100%;
   padding: 1.5rem 1rem 1rem 1rem;
-  justify-content: center;
+  align-self: flex-start;
 }
 
 /* Form */
@@ -96,7 +98,7 @@ li { list-style: none; }
 #add-form input[type=text] {
   width: 100%;
   padding: 0.9rem 1.5rem 0.9rem 0.9rem;
-  font-size: var(--font);
+  font-family: var(--font);
   font-style: italic;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-style: solid none solid none;
@@ -137,6 +139,10 @@ li { list-style: none; }
   border-style: none none solid none;
 }
 
+.item:hover {
+  background-color: #f7f7f7;
+}
+
 .checkbox:checked {
   background-color: var(--disabled);
 }
@@ -146,6 +152,7 @@ input[type="checkbox"]:checked + label {
   animation: move 0.4s ease forwards;
 }
 
+/*
 @keyframes move {
   50% {
     padding-left: 8px;
@@ -156,12 +163,13 @@ input[type="checkbox"]:checked + label {
     padding-right: 4px;
   }
 }
-
+*/
 #checklist label {
   cursor: pointer;
 }
 
 #items .btn {
+  display: block;
   position: absolute;
   right: 0;
   top: 0;
@@ -173,12 +181,59 @@ input[type="checkbox"]:checked + label {
   background: no-repeat center/20% url('./images/vertical-dots-icon.svg');
 }
 
+#items .btn-delete {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1.5rem;
+  cursor: pointer;
+  border: none;
+  opacity: 0.6;
+}
+
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1.5rem;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  background: no-repeat center/50% url('./images/delete.svg');
+}
+
+input[type=text].edit {
+  width: 90%;
+  padding: 0.2rem 1rem 0.2rem 0.2rem;
+  font-family: var(--font);
+}
+
+input[type=text].edit:focus {
+  outline: none;
+  border-radius: 0.5rem;
+  border: 1px solid #949494;
+}
+
+.task-item .delete-button {
+  display: none;
+}
+
+.task-item:hover .delete-button {
+  display: inline-block;
+}
+
 /* Clear */
 
 #clear button {
   width: 100%;
-  height: 3.5rem;
+  height: 2.5rem;
   border: none;
+  font-size: 1rem;
   color: gray;
   cursor: pointer;
 }
