@@ -132,3 +132,7 @@ clearButton.addEventListener('click', () => {
 });
 
 displayTasks();
+
+export {
+  ItemsArray, displayTasks, addTask, addButton, clearButton,
+};

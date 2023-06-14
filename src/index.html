@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>
         <%= title %>
@@ -20,18 +20,20 @@
     <main>
         <div id="checklist">
             <div class="header">
-                <h1><%= header%></h1>
+                <h1>
+                    <%= header%>
+                </h1>
             </div>
             <div id="items">
-                <form id="add-form" class="add-form" action="" method="">
+                <form id="add-form" class="add-form">
                     <label for="add-item">
-                        <input type="text" name="add-item" id="add-item" class="add-form__input" placeholder="Add a new item to the list..." required autofocus>
-                        <button type="button" id="add-button"></button>
+                        <input type="text" name="add-item" id="add-item" class="add-form__input"
+                            placeholder="Add a new item to the list..." required autofocus>
                     </label>
+                    <button type="button" id="add-button"></button>
                     <div id="error"></div>
                 </form>
                 <ul id="list">
-                    
                 </ul>
             </div>
             <div id="clear">
