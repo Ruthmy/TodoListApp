@@ -113,37 +113,37 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<ul>
-    <li><p>You can just create a Repository from the Template</p></li>
-</ul>
-<p>or you can</p>
-<ul>
-    <li><p>Open your terminal and clone the repo with this command `cd my-folder git clone git@github.com:myaccount/my-project.git`</p></li>
-</ul>
+Clone this repository to your desired folder by using this 👇️ command :
+```
+git clone git@github.com:Ruthmy/TodoListApp.git
+```
 
 ### Install
 
 Install this project with:
 
-<ul>
-    <li><p>You don't need install this project.</p></li>
-</ul>
+```
+ npm install
+```
 
 ### Usage
 
-To open it, make double-click on the HTML file. Run it in your browser.
+```
+ npm run start
+```
 
 ### Run tests
 
-Not applicable.
+
+```
+ npm test
+```
 
 ### Deployment
 
 You can deploy this project using:
 
-- [Implementation Link](https://github.com/microverseinc/curriculum-transversal-skills/blob/main/documentation/hello_microverse_project.md)
+- [Implementation Link](https://ruthmy.github.io/TodoListApp/dist/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,6 +157,11 @@ You can deploy this project using:
 - Twitter: [@rury_exe](https://twitter.com/rury_exe)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/ruth-abreu)
 
+👤 **Amir Hussain Habibi**
+
+- GitHub: [@AmirHussainhabibi](https://github.com/Salarhabibi-amir)
+- LinkedIn: [Amir Hussain Habibi](https://www.linkedin.com/in/amir-hussain-habibi-153688185/)
+- Portfolio:[ salarhabibi-amir ](https://salarhabibi-amir.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,7 +190,8 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and know someone who might find it helpful, please share it.
-If you liked the original design that inspired this project, I recommend you [visit Cindy Shin's Behance post](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015). and follow her on Behance to support her work.
+Or give it a **star** ⭐️
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
