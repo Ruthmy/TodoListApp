@@ -88,13 +88,6 @@ li { list-style: none; }
   width: 100%;
 }
 
-/*
-#add-form label {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-*/
 #add-form input[type=text] {
   width: 100%;
   padding: 0.9rem 1.5rem 0.9rem 0.9rem;
@@ -152,20 +145,21 @@ input[type="checkbox"]:checked + label {
   animation: move 0.4s ease forwards;
 }
 
-/*
+
 @keyframes move {
   50% {
-    padding-left: 8px;
+    padding-left: 1rem;
     padding-right: 0;
   }
 
   100% {
-    padding-right: 4px;
+    padding-right: 0.5rem;
   }
 }
-*/
-#checklist label {
+
+#list label {
   cursor: pointer;
+  padding-left: 0.5rem;
 }
 
 #items .btn {

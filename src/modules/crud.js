@@ -1,4 +1,6 @@
 import deleteCompletedTasks from './deleteCompletedTasks.js';
+import addTask from './addTask.js';
+import deleteTask from './deleteTask.js';
 
 // Get HTML elements
 const addButton = document.getElementById('add-button');
@@ -79,19 +81,15 @@ function displayTasks() {
         }
       });
 
+      // Delete a task when user click the delete button
+      const taskIndex = task.index;
       deleteButton.addEventListener('click', () => {
-        ItemsArray.splice(task.index - 1, 1);
-
-        // Update the index property of the remaining tasks
-        ItemsArray.forEach((task, index) => {
-          task.index = index + 1;
-        });
-        localStorage.setItem('tasks', JSON.stringify(ItemsArray));
+        deleteTask(taskIndex);
         window.location.reload();
       });
     });
 
-    checkbox.addEventListener('change', (event) => {
+    checkbox.addEventListener('click', (event) => {
       const index = event.target.dataset.index - 1;
       ItemsArray[index].completed = event.target.checked;
       localStorage.setItem('tasks', JSON.stringify(ItemsArray));
@@ -99,29 +97,20 @@ function displayTasks() {
   });
 }
 
-// Add functionality
-function addTask() {
-  const input = document.getElementById('add-item');
-  const description = input.value;
-  const index = ItemsArray.length + 1;
-  const completed = false;
-  const newItem = { index, description, completed };
-  ItemsArray.push(newItem);
-  localStorage.setItem('tasks', JSON.stringify(ItemsArray));
-  document.getElementById('add-form').reset();
-  window.location.reload();
-}
+displayTasks();
 
 // Add a new task when user hit the add button
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
   addTask();
+  window.location.reload();
 });
 
 // Add a new task when user hit enter key
 input.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     addTask();
+    window.location.reload();
   }
 });
 
@@ -131,8 +120,4 @@ clearButton.addEventListener('click', () => {
   displayTasks();
 });
 
-displayTasks();
-
-export {
-  ItemsArray, displayTasks, addTask, addButton, clearButton,
-};
+export default displayTasks;
