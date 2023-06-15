@@ -190,7 +190,7 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and know someone who might find it helpful, please share it.
-Or give it a **start** ⭐️
+Or give it a **star** ⭐️
 
 
 
