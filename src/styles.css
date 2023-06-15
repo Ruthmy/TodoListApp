@@ -145,7 +145,6 @@ input[type="checkbox"]:checked + label {
   animation: move 0.4s ease forwards;
 }
 
-
 @keyframes move {
   50% {
     padding-left: 1rem;
