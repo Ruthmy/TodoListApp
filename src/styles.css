@@ -7,7 +7,7 @@
   --todo-background: #fff;
   --background: #e8e8e8;
   --hover-task: #f7f7f7;
-  --font: "Montserrat", sans-serif;
+  --font: 'Montserrat', sans-serif;
 }
 
 html {
@@ -37,24 +37,26 @@ main {
   font-family: var(--font);
 }
 
+/* Text Styles */
+
 button,
 input {
   font-family: var(--font);
   font-size: 1.6rem;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
+h1 { font-size: 2.5rem; }
 
 p,
 label {
   font-size: 1.6rem;
 }
 
-li {
-  list-style: none;
-}
+li { list-style: none; }
+
+/* Todo List */
+
+/* Checklist */
 
 #checklist {
   display: flex;
@@ -71,18 +73,22 @@ li {
   transition: max-height 0s;
 }
 
+/* Header */
+
 #checklist .header {
   width: 100%;
   padding: 1.5rem 1rem 1rem 1rem;
   align-self: flex-start;
 }
 
+/* Form */
+
 #add-form {
   position: relative;
   width: 100%;
 }
 
-#add-form input[type="text"] {
+#add-form input[type=text] {
   width: 100%;
   padding: 0.9rem 1.5rem 0.9rem 0.9rem;
   font-family: var(--font);
@@ -93,20 +99,22 @@ li {
   backface-visibility: hidden;
 }
 
-#add-form input[type="text"]:focus {
+#add-form input[type=text]:focus {
   outline: none;
   border: 1px solid #949494;
 }
 
-#add-form button[type="button"] {
+#add-form button[type=button] {
   position: absolute;
   margin-left: -1.5rem;
   height: 100%;
   width: 1.5rem;
   cursor: pointer;
   border: none;
-  background: no-repeat center/60% url("./images/arrow-enter.svg");
+  background: no-repeat center/60% url('./images/arrow-enter.svg');
 }
+
+/* Items */
 
 #items ul {
   width: 100%;
@@ -137,6 +145,7 @@ input[type="checkbox"]:checked + label {
   animation: move 0.4s ease forwards;
 }
 
+
 @keyframes move {
   50% {
     padding-left: 1rem;
@@ -163,7 +172,7 @@ input[type="checkbox"]:checked + label {
   cursor: pointer;
   border: none;
   opacity: 0.6;
-  background: no-repeat center/20% url("./images/vertical-dots-icon.svg");
+  background: no-repeat center/20% url('./images/vertical-dots-icon.svg');
 }
 
 #items .btn-delete {
@@ -189,16 +198,16 @@ input[type="checkbox"]:checked + label {
   display: inline-block;
   vertical-align: middle;
   fill: currentColor;
-  background: no-repeat center/50% url("./images/delete.svg");
+  background: no-repeat center/50% url('./images/delete.svg');
 }
 
-input[type="text"].edit {
+input[type=text].edit {
   width: 90%;
   padding: 0.2rem 1rem 0.2rem 0.2rem;
   font-family: var(--font);
 }
 
-input[type="text"].edit:focus {
+input[type=text].edit:focus {
   outline: none;
   border-radius: 0.5rem;
   border: 1px solid #949494;
@@ -211,6 +220,8 @@ input[type="text"].edit:focus {
 .task-item:hover .delete-button {
   display: inline-block;
 }
+
+/* Clear */
 
 #clear button {
   width: 100%;
