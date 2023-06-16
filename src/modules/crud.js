@@ -1,6 +1,8 @@
 import deleteCompletedTasks from './deleteCompletedTasks.js';
 import addTask from './addTask.js';
 import deleteTask from './deleteTask.js';
+import editTask from './editTask.js';
+import changeTaskStatus from './changeTaskStatus.js';
 
 // Get HTML elements
 const addButton = document.getElementById('add-button');
@@ -16,6 +18,7 @@ function displayTasks() {
 
   // Loop through the items and add them to the ul
   ItemsArray.forEach((task) => {
+
     // Create the li element
     const li = document.createElement('li');
     li.classList.add('item');
@@ -49,7 +52,7 @@ function displayTasks() {
     list.appendChild(li);
 
     // Add event listeners for editing and deleting
-    label.addEventListener('dblclick', () => {
+    label.addEventListener('dblclick', (event) => {
       // Replace the label with an input field
       const input = document.createElement('input');
       input.setAttribute('type', 'text');
@@ -69,8 +72,8 @@ function displayTasks() {
           event.preventDefault();
 
           // Update the task description in the array
-          task.description = input.value;
-          localStorage.setItem('tasks', JSON.stringify(ItemsArray));
+          const taskIndex = task.index - 1;
+          editTask(taskIndex, input.value, ItemsArray);
 
           // Replace the input field with the label
           li.replaceChild(label, input);
@@ -91,8 +94,8 @@ function displayTasks() {
 
     checkbox.addEventListener('click', (event) => {
       const index = event.target.dataset.index - 1;
-      ItemsArray[index].completed = event.target.checked;
-      localStorage.setItem('tasks', JSON.stringify(ItemsArray));
+      const status = event.target.checked;
+      changeTaskStatus(index, status, ItemsArray);
     });
   });
 }
