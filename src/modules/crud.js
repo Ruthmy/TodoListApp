@@ -18,7 +18,6 @@ function displayTasks() {
 
   // Loop through the items and add them to the ul
   ItemsArray.forEach((task) => {
-
     // Create the li element
     const li = document.createElement('li');
     li.classList.add('item');
@@ -52,7 +51,7 @@ function displayTasks() {
     list.appendChild(li);
 
     // Add event listeners for editing and deleting
-    label.addEventListener('dblclick', (event) => {
+    label.addEventListener('dblclick', () => {
       // Replace the label with an input field
       const input = document.createElement('input');
       input.setAttribute('type', 'text');
