@@ -1,6 +1,8 @@
 import deleteCompletedTasks from './deleteCompletedTasks.js';
 import addTask from './addTask.js';
 import deleteTask from './deleteTask.js';
+import editTask from './editTask.js';
+import changeTaskStatus from './changeTaskStatus.js';
 
 // Get HTML elements
 const addButton = document.getElementById('add-button');
@@ -69,8 +71,8 @@ function displayTasks() {
           event.preventDefault();
 
           // Update the task description in the array
-          task.description = input.value;
-          localStorage.setItem('tasks', JSON.stringify(ItemsArray));
+          const taskIndex = task.index - 1;
+          editTask(taskIndex, input.value, ItemsArray);
 
           // Replace the input field with the label
           li.replaceChild(label, input);
@@ -91,8 +93,8 @@ function displayTasks() {
 
     checkbox.addEventListener('click', (event) => {
       const index = event.target.dataset.index - 1;
-      ItemsArray[index].completed = event.target.checked;
-      localStorage.setItem('tasks', JSON.stringify(ItemsArray));
+      const status = event.target.checked;
+      changeTaskStatus(index, status, ItemsArray);
     });
   });
 }
